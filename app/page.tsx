@@ -1,27 +1,11 @@
 import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center">
-      {/* Header */}
-      <header className="w-full bg-blue-600 text-white shadow-md">
-        <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-blue-600 font-bold text-xl">JT</span>
-            </div>
-            <h1 className="text-2xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>Jaya Travel</h1>
-          </div>
-          <nav className="hidden md:flex gap-6 font-medium">
-            <a href="#" className="hover:text-blue-100 transition">Home</a>
-            <a href="#destinations" className="hover:text-blue-100 transition">Destinations</a>
-            <a href="#about" className="hover:text-blue-100 transition">About</a>
-          </nav>
-          <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition">
-            Book Now
-          </button>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="w-full bg-white py-20 border-b">
@@ -118,25 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="w-full bg-slate-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-              <span className="text-white font-bold">JT</span>
-            </div>
-            <span className="text-xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>Jaya Travel</span>
-          </div>
-          <p className="text-slate-400 mb-8">Making your travel dreams come true since 2010.</p>
-          <div className="flex justify-center gap-8 text-slate-400 mb-8">
-            <a href="#" className="hover:text-white transition">About</a>
-            <a href="#" className="hover:text-white transition">Destinations</a>
-            <a href="#" className="hover:text-white transition">Terms</a>
-            <a href="#" className="hover:text-white transition">Privacy</a>
-          </div>
-          <p className="text-slate-500 text-sm">&copy; 2024 Jaya Travel & Tours. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
